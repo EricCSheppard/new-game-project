@@ -6,7 +6,8 @@ const ctx = game.getContext('2d')
 game.setAttribute('width', getComputedStyle(game)['width'])
 game.setAttribute('height', getComputedStyle(game)['height'])
 
-game.height = 800
+game.height = 400
+game.width = 600
 
 // Create class for pokers
 
@@ -29,10 +30,18 @@ class Poker {
 
 const poker1 = new Poker(
     10,
-    10,
+    200,
     100,
-    300,
+    20,
     'maroon'
+)
+
+const poker2 = new Poker(
+    400,
+    200,
+    100,
+    20,
+    'yellow'
 )
 
 
@@ -41,6 +50,7 @@ const poker1 = new Poker(
 const gameLoop = () => {
     ctx.clearRect(0,0, game.width, game.height)
     poker1.render()
+    poker2.render()
 
 }
 
